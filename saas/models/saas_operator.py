@@ -29,7 +29,7 @@ class SAASOperator(models.Model):
     db_name_template = fields.Char('DB Names', required=True, help='Avaialble variables: {unique_id}')
     template_operator_ids = fields.One2many('saas.template.operator', 'operator_id')
 
-    def _create_db(self, template_db, db_name, demo, lang='en_US'):
+    def _create_db(self, template_db, db_name, demo, lang='es_MX'):
         """Synchronous db creation"""
         if self.type == 'local':
             # to avoid installing extra modules we need this condition
