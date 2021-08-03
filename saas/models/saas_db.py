@@ -25,7 +25,7 @@ class SAASDB(models.Model):
         return super(SAASDB, self).unlink()
 
     @job
-    def create_db(self, template_db, demo, lang='en_US', callback_obj=None, callback_method=None):
+    def create_db(self, template_db, demo, lang='es_MX', callback_obj=None, callback_method=None):
         self.ensure_one()
         db_name = self.name
         self.operator_id._create_db(template_db, db_name, demo, lang)
